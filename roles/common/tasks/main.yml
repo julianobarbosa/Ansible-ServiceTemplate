@@ -1,0 +1,35 @@
+---
+#
+# TEMPLATE main & tasks are defined here.
+#
+
+- name: Install TEMPLATE
+  yum:
+    name: TEMPLATE
+    state: latest
+    #disable_gpg_check: yes
+    #enablerepo: TEMPLATE
+  notify: TEMPLATE httpd service
+
+#- name: Configure TEMPLATE file
+#  template:
+#    src: roles/common/templates/TEMPLATE.conf.j2
+#    dest: /etc/TEMPLATE.conf
+#  notify: restart TEMPLATE service
+
+#- name: Copy TEMPLATE_static file
+#  template: 
+#    src: TEMPLATE_static.conf
+#    dest: /etc/TEMPLATE.conf
+#    notify: restart TEMPLATE
+
+#- name: Add line to TEMPLATE file
+#  lineinfile:
+#    dest: /etc/TEMPLATE.conf
+#    state: present
+#    line: "{{ item }}"
+#  with_items:
+#    - 'Line item 1'
+#    - 'Line item 2'
+#    - 'Line item 3'
+

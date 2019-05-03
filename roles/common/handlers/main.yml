@@ -1,0 +1,23 @@
+---
+#
+#  TEMPLATE Handlers are defined here.
+#
+
+- name: start TEMPLATE service
+  service:
+    name: TEMPLATE
+    state: started
+    enabled: yes
+
+- name: restart TEMPLATE service
+  service:
+    name: TEMPLATE
+    state: restarted
+    enabled: yes
+
+- name: reload TEMPLATE service
+  service:
+    name: TEMPLATE
+    state: reloaded
+    enabled: yes
+

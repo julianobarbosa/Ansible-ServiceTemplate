@@ -1,0 +1,23 @@
+---
+#
+# This TEMPLATE playbook deploys, configures & starts TEMPLATE.
+#
+
+- name: Install, Configure and deploy TEMPLATE. common config
+  hosts: all
+  remote_user: root
+
+  vars_files:
+    - group_vars/all
+
+  roles:
+  - common
+
+
+#- name: Install, Configure and deploy TEMPLATE. special config
+#  hosts: all
+#  remote_user: root
+#
+#  roles:
+#  - special
+
